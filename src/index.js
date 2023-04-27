@@ -1,22 +1,23 @@
 import validator from './validator.js';
 
+document.getElementById("expiry").addEventListener("input", function () {
+    var i = document.getElementById("expiry").value.length;
+    if (i === 2)
+        document.getElementById("expiry").value = document.getElementById("expiry").value + "/";
+});
+
 const btnCard = document.getElementById("btnValidate");
 const alertCard = document.getElementById("cardResult");
 btnCard.addEventListener('click', cardValidator);
 
-btnValidate.submit(function () {
-    sendContactForm();
-    return false;
-});
-
 function cardValidator() {
-    const creditCardNumber = document.getElementById("number").value;
-    const finalResult = validator.isValid(creditCardNumber);
-    const maskedNumbers = validator.maskify(creditCardNumber)
+    const CardNumber = document.getElementById("number").value;
+    const finalResult = validator.isValid(CardNumber);
+    const maskedNumbers = validator.maskify(CardNumber)
 
-    if (creditCardNumber === "") {
+    if (CardNumber === "") {
         return alertCard.innerText = "Por favor, digite o número do seu cartão.";
-    } else if (creditCardNumber.length <= 16) {
+    } else if (CardNumber.length <= 16) {
         return alertCard.innerText = "Faltam alguns dígitos no número do seu cartão. Favor verificar.";
     } else if (finalResult === true) {
         return alertCard.innerText = "O seu cartão de número " + maskedNumbers + " é válido";

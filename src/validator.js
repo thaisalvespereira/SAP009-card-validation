@@ -1,9 +1,9 @@
 const validator = {
 
-    isValid(creditCardNumber) {
+    isValid(CardNumber) {
         const newArray = [];
-        for (let i = 0; i < creditCardNumber.length; i++) {
-            const numCard = parseInt(creditCardNumber[i]);
+        for (let i = 0; i < CardNumber.length; i++) {
+            const numCard = parseInt(CardNumber[i]);
             newArray.push(numCard)
         }
 
@@ -30,13 +30,13 @@ const validator = {
         }
     },
 
-    maskify(creditCardNumber) {
+    maskify(CardNumber) {
         const maskNumber = [];
-        for (let i = 0; i < creditCardNumber.length; i++) {
-            if (i < creditCardNumber.length - 4) {
+        for (let i = 0; i < CardNumber.length; i++) {
+            if (i < CardNumber.length - 4) {
                 maskNumber.push("#");
             } else {
-                maskNumber.push(creditCardNumber[i])
+                maskNumber.push(CardNumber[i])
             }
         }
         const masked = maskNumber.join("");
