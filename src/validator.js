@@ -43,5 +43,4 @@ const validator = {
         return masked;
     }
 }
-
 export default validator;
