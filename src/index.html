@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Tarjeta de crédito válida</title>
+  <title>Validador de Cartão</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -49,9 +49,9 @@
                   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                   maxlength="16"><br>
               </div>
+              <button type="submit" id="btnValidate" class="purchase--btn">Validar</button>
+              <p id="cardResult"></p>
             </form>
-            <button type="submit" id="btnValidate" class="purchase--btn">Validar</button>
-            <p id="cardResult"></p>
           </section>
         </div>
   </main>
