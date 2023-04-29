@@ -24,4 +24,5 @@ function cardValidator(event) {
     return alertCard.innerText = "Infelizmente, o seu cartão de número " + maskedNumbers + " não está válido. Favor verificar.";
   }
 }
+
 console.log(validator);
