@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="utf-8">
-    <title>Validador de Cartão</title>
-    <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <main>
-            <div class="modal">
-            <form class="form">
-                <div class="payment--options">
-                <button name="paypal" type="button">
-                    <img src="img/paypal.png">
-                </button>
-                <button name="apple-pay" type="button">
-                    <img src="img/gpay.jpg">
-                </button>
-                <button name="google-pay" type="button">
-                    <img src="img/pix.png">
-                </button>
-            </form>
+<head>
+<meta charset="utf-8">
+<title>Validador de Cartão</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main>
+        <div class="modal">
+        <form class="form">
+            <div class="payment--options">
+            <button name="paypal" type="button">
+                <img src="img/paypal.png">
+            </button>
+            <button name="apple-pay" type="button">
+                <img src="img/gpay.jpg">
+            </button>
+            <button name="google-pay" type="button">
+                <img src="img/pix.png">
+            </button>
             </div>
             <div class="separator">
             <hr class="line">
@@ -28,11 +27,11 @@
             </div>
             <div class="cartao">
             <section class="container">
-            <form id="form">
-            <div class="input_container">
-            <label for="name" class="input_label">Nome do titular:</label><br>
-            <input type="text" id="name" class="input_field" autocomplete="off" placeholder="ex.: Thais Alves"><br>
-            </div>
+                <form id="form">
+                <div class="input_container">
+                    <label for="name" class="input_label">Nome do titular:</label><br>
+                    <input type="text" id="name" class="input_field" autocomplete="off" placeholder="ex.: Thais Alves"><br>
+                </div>
                 <div class="input_container">
                     <label for="expiry" class="input_label">Data de validade:</label><br>
                     <input type="text" id="expiry" class="input_field" maxlength="5" autocomplete="off"
@@ -49,12 +48,12 @@
                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                     maxlength="16"><br>
                 </div>
-                    <button type="submit" id="btnValidate" class="purchase--btn">Validar</button>
-                    <p id="cardResult"></p>
-            </form>
+                <button type="submit" id="btnValidate" class="purchase--btn">Validar</button>
+                <p id="cardResult"></p>
+                </form>
             </section>
             </div>
-        </main>
-    <script src="index.js" type="module"></script>
-    </body>
+    </main>
+<script src="index.js" type="module"></script>
+</body>
 </html>
